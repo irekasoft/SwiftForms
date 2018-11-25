@@ -68,35 +68,35 @@ class ExampleFormViewController: FormViewController {
         let section1 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
         
         var row = FormRowDescriptor(tag: Static.emailTag, type: .email, title: "Email")
-        row.configuration.cell.appearance = ["textField.placeholder" : "john@gmail.com" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject ]
+        row.configuration.cell.appearance = ["textField.placeholder" : "john@gmail.com" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject ]
         section1.rows.append(row)
 
         row = FormRowDescriptor(tag: Static.passwordTag, type: .password, title: "Password")
-        row.configuration.cell.appearance = ["textField.placeholder" : "Enter password" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : "Enter password" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject]
         section1.rows.append(row)
         
         let section2 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
         
         row = FormRowDescriptor(tag: Static.nameTag, type: .name, title: "First Name")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Miguel Ángel" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Miguel Ángel" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject]
         section2.rows.append(row)
         
         row = FormRowDescriptor(tag: Static.lastNameTag, type: .name, title: "Last Name")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Ortuño" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Ortuño" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject]
         section2.rows.append(row)
         
         row = FormRowDescriptor(tag: Static.jobTag, type: .text, title: "Job")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Entrepreneur" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Entrepreneur" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject]
         section2.rows.append(row)
         
         let section3 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
 
         row = FormRowDescriptor(tag: Static.URLTag, type: .url, title: "URL")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. gethooksapp.com" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. gethooksapp.com" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject]
         section3.rows.append(row)
         
         row = FormRowDescriptor(tag: Static.phoneTag, type: .phone, title: "Phone")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. 0034666777999" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. 0034666777999" as AnyObject, "textField.textAlignment" : NSTextAlignment.left.rawValue as AnyObject]
         section3.rows.append(row)
         
         let section4 = FormSectionDescriptor(headerTitle: "An example header title", footerTitle: "An example footer title")

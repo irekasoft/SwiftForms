@@ -162,9 +162,9 @@
 		0CCA342D1B04FBE0006D9666 /* SwiftForms */ = {
 			isa = PBXGroup;
 			children = (
-				0CCA34621B050525006D9666 /* cells */,
-				0CCA34701B050525006D9666 /* controllers */,
-				0CCA34741B050525006D9666 /* descriptors */,
+				0CCA34621B050525006D9666 /* Cells */,
+				0CCA34701B050525006D9666 /* Controllers */,
+				0CCA34741B050525006D9666 /* Descriptors */,
 				0CB1F6C21C37F9B900CD2A7B /* FormErrorType.swift */,
 				0CCA34301B04FBE0006D9666 /* SwiftForms.h */,
 				0CCA342E1B04FBE0006D9666 /* Supporting Files */,
@@ -180,10 +180,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0CCA34621B050525006D9666 /* cells */ = {
+		0CCA34621B050525006D9666 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0CCA34631B050525006D9666 /* base */,
+				0CCA34631B050525006D9666 /* Base */,
 				0CCA34671B050525006D9666 /* FormButtonCell.swift */,
 				BDD108791C925D14000EDEE5 /* FormLabelCell.swift */,
 				0CCA34681B050525006D9666 /* FormCheckCell.swift */,
@@ -197,37 +197,37 @@
 				0CDBB4F01B10699A00BE6ACF /* FormStepperCell.swift */,
 				0CDBB4F21B10724600BE6ACF /* FormSliderCell.swift */,
 			);
-			path = cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		0CCA34631B050525006D9666 /* base */ = {
+		0CCA34631B050525006D9666 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				0CCA34641B050525006D9666 /* FormBaseCell.swift */,
 				0CCA34651B050525006D9666 /* FormTitleCell.swift */,
 				0CCA34661B050525006D9666 /* FormValueCell.swift */,
 			);
-			path = base;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		0CCA34701B050525006D9666 /* controllers */ = {
+		0CCA34701B050525006D9666 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0CCA34721B050525006D9666 /* FormSelector.swift */,
 				0CCA34731B050525006D9666 /* FormViewController.swift */,
 				0C9D1DF21D2267EE00909941 /* FormOptionsViewController.swift */,
 			);
-			path = controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0CCA34741B050525006D9666 /* descriptors */ = {
+		0CCA34741B050525006D9666 /* Descriptors */ = {
 			isa = PBXGroup;
 			children = (
 				0CCA34751B050525006D9666 /* FormDescriptor.swift */,
 				0CCA34761B050525006D9666 /* FormRowDescriptor.swift */,
 				0CCA34771B050525006D9666 /* FormSectionDescriptor.swift */,
 			);
-			path = descriptors;
+			path = Descriptors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
