@@ -32,24 +32,83 @@ open class FormTextViewCell : FormBaseCell, UITextViewDelegate {
     
     selectionStyle = .none
     
+    // Title Label
+    
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    textField.translatesAutoresizingMaskIntoConstraints = false
-    
-    titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
-    textField.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
-    
+    titleLabel.font = UIFont.boldSystemFont(ofSize: 13)
     contentView.addSubview(titleLabel)
-    contentView.addSubview(textField)
     
     titleLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 500), for: .horizontal)
     
-    contentView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: contentView, attribute: .height, multiplier: 1.0, constant: 0.0))
+    titleLabel.addConstraint(NSLayoutConstraint(item: titleLabel,
+                                                attribute: .height,
+                                                relatedBy: .equal,
+                                                toItem: nil,
+                                                attribute: .notAnAttribute,
+                                                multiplier: 1,
+                                                constant: 20))
     
-    contentView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1.0, constant: 0.0))
-        
-    contentView.addConstraint(NSLayoutConstraint(item: textField, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1.0, constant: 0.0))
+    contentView.addConstraint(NSLayoutConstraint(item: titleLabel,
+                                                 attribute: .top,
+                                                 relatedBy: .equal,
+                                                 toItem: contentView,
+                                                 attribute: .topMargin,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
     
-    contentView.addConstraint(NSLayoutConstraint(item: textField, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1.0, constant: 0.0))
+    contentView.addConstraint(NSLayoutConstraint(item: titleLabel,
+                                                 attribute: .left,
+                                                 relatedBy: .equal,
+                                                 toItem: contentView,
+                                                 attribute: .leftMargin,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
+    
+    contentView.addConstraint(NSLayoutConstraint(item: titleLabel,
+                                                 attribute: .right,
+                                                 relatedBy: .equal,
+                                                 toItem: contentView,
+                                                 attribute: .rightMargin,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
+    
+    // Text Field
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+    
+    contentView.addSubview(textField)
+    
+    contentView.addConstraint(NSLayoutConstraint(item: textField,
+                                                 attribute: .top,
+                                                 relatedBy: .equal,
+                                                 toItem: titleLabel,
+                                                 attribute: .bottom,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
+    
+    contentView.addConstraint(NSLayoutConstraint(item: textField,
+                                                 attribute: .left,
+                                                 relatedBy: .equal,
+                                                 toItem: contentView,
+                                                 attribute: .leftMargin,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
+    
+    contentView.addConstraint(NSLayoutConstraint(item: textField,
+                                                 attribute: .right,
+                                                 relatedBy: .equal,
+                                                 toItem: contentView,
+                                                 attribute: .rightMargin,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
+    
+    contentView.addConstraint(NSLayoutConstraint(item: textField,
+                                                 attribute: .bottom,
+                                                 relatedBy: .equal,
+                                                 toItem: contentView,
+                                                 attribute: .bottom,
+                                                 multiplier: 1.0,
+                                                 constant: 0.0))
     
     textField.delegate = self
     
@@ -75,21 +134,7 @@ open class FormTextViewCell : FormBaseCell, UITextViewDelegate {
     return views
   }
   
-  open override func defaultVisualConstraints() -> [String] {
-    if self.imageView!.image != nil {
-      if let text = titleLabel.text , text.count > 0 {
-        return ["H:[imageView]-[titleLabel]-[textField]-16-|"]
-      } else {
-        return ["H:[imageView]-[textField]-16-|"]
-      }
-    } else {
-      if let text = titleLabel.text , text.count > 0 {
-        return ["H:|-16-[titleLabel]-[textField]-16-|"]
-      } else {
-        return ["H:|-16-[textField]-16-|"]
-      }
-    }
-  }
+  
   
   // MARK: UITextViewDelegate
   
@@ -98,7 +143,7 @@ open class FormTextViewCell : FormBaseCell, UITextViewDelegate {
     guard let text = textView.text , text.count > 0 else { rowDescriptor?.value = nil; update(); return }
     rowDescriptor?.value = text as AnyObject
     update()
-  
+    
   }
   
 }
