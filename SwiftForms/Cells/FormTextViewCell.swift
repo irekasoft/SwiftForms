@@ -74,7 +74,7 @@ open class FormTextViewCell : FormBaseCell, UITextViewDelegate {
     
     // Text Field
     textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+    textField.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
     
     contentView.addSubview(textField)
     
