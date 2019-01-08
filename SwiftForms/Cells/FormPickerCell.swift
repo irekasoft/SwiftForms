@@ -37,7 +37,8 @@ open class FormPickerCell: FormValueCell, UIPickerViewDelegate, UIPickerViewData
       hiddenTextField.inputAccessoryView = inputAccesoryView()
     }
     
-    titleLabel.text = rowDescriptor?.title
+    titleLabel.text = rowDescriptor?.title    
+    valueLabel.font = UIFont.systemFont(ofSize: 13)
     
     if let selectedValue = rowDescriptor?.value {
       valueLabel.text = rowDescriptor?.configuration.selection.optionTitleClosure?(selectedValue)
